@@ -51,8 +51,6 @@ def random_training_set(chunk_len, batch_size):
 
 def train(inp, target):
     hidden = decoder.init_hidden(args.batch_size)
-    if args.cuda:
-        hidden = hidden.cuda()
     decoder.zero_grad()
     loss = 0
 
